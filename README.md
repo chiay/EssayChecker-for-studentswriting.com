@@ -19,6 +19,18 @@
 - Copy the code from script.js to MediaWiki.Common.js
   - If a new page (eg. MediaWiki:Example.js) is created to contain it, add this line 
   `mw.loader.load( '/w/index.php?title=MediaWiki:Example.js&action=raw&ctype=text/javascript' );` to MediaWiki:Common.js to load
+- Create a template in MediaWiki (eg. Template:Example) and paste the following code:
+  `<div class="modal">
+      <div class="modalContent">
+         <span class="close">&times;</span>
+         <span class="info">Highlight Info:</span>
+         <span class="topic">R - Restate the question</span>
+         <span class="detail">A - Answer the question</span>
+         <span class="cite">C - Cite the text evidence</span>
+         <span class="conclusion">E - Explain the cited text</span>
+         <div class="modalText"></div>
+      </div>
+   </div>`
   
 ### Use Plug-In
 
