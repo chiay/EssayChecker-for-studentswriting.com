@@ -21,7 +21,6 @@
   `mw.loader.load( '/w/index.php?title=MediaWiki:Example.js&action=raw&ctype=text/javascript' );` to MediaWiki:Common.js to load
 - Create a template in MediaWiki (eg. Template:Example) and paste the following code:
   ```
-  {
     <div class="modal">
       <div class="modalContent">
          <span class="close">&times;</span>
@@ -33,7 +32,6 @@
          <div class="modalText"></div>
       </div>
    </div>
-  }
   ```
   
 ### Use Plug-In
