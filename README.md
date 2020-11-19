@@ -20,7 +20,7 @@
   - If a new page (eg. MediaWiki:Example.js) is created to contain it, add this line 
   `mw.loader.load( '/w/index.php?title=MediaWiki:Example.js&action=raw&ctype=text/javascript' );` to MediaWiki:Common.js to load
 - Create a template in MediaWiki (eg. Template:Example) and paste the following code:
-  ```
+  ```html
     <div class="modal">
       <div class="modalContent">
          <span class="close">&times;</span>
