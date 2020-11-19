@@ -36,4 +36,4 @@
   
 ### Use Plug-In
 
-To check a paragraph, it must be wrapped with `<div class="checker-container"><p>YOUR PARAGRAPH</p></div>`. Add a `<p></p>` tag to each paragraph for essay checking. Once added, a button will show on top of your paragraph/essay. 
+To check a paragraph, it must be wrapped with `<div class="checker-container"><p>YOUR PARAGRAPH</p></div>`. Add a `<p></p>` tag to each paragraph for essay checking. Once added, a button will show on top of your paragraph/essay. Add `{{TEMPLATENAME}}` in any page where checker is needed. (Note: TEMPLATENAME must match the template name during setup, eg. Template:TEMPLATENAME.)
