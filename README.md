@@ -1,4 +1,4 @@
-﻿# EssayChecker
+﻿# EssayChecker 🔍
  
  A plugin that is used to check paragraph/essay structure based on the rules showing below:
  
@@ -11,7 +11,7 @@
 
 ## Usage
 
-### Setup
+### Setup 🔧
 
 - Copy the code from style.css to MediaWiki:Common.css
   - If a new page (eg. MediaWiki:Example.css) is created to contain it, add this line 
