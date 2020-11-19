@@ -33,11 +33,9 @@ function checkEssay(container) {
       const childList = Array.from(children);
 
       childList.forEach(child => {
-         let splittedSentence = child.textContent.split(/(\w[^.?]+\w[^\s?]*)\s+/gi).filter((el) => { return el.length != 0; });
+         let splittedSentence = child.textContent.split(/((?![.\n\s])[^.\n"]*(?:"[^\n"]*[^\n".]"[^.\n"]*)*(?:"[^"\n]+\."|\.|(?=\n)))/gi).filter((el) => { return el.length != 0; });
 
          splittedSentence.shift();
-
-         console.log(splittedSentence);
 
          let spannedSentence = addSpanTag(splittedSentence);
 
@@ -46,8 +44,6 @@ function checkEssay(container) {
 
          paragraphElement.innerHTML = resultParagraph;
          modalText.innerHTML += paragraphElement.outerHTML;
-         
-         //child.innerHTML = resultParagraph;
       });
    }
 }
