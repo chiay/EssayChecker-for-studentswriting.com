@@ -101,6 +101,12 @@ label {
    width: 80%; /* Could be more or less, depending on screen size */
 }
 
+.modalError {
+   font-size: 24px;
+   text-align: center;
+   color: red;
+}
+
 .close {
    color: #aaa;
    align-self: flex-end;
