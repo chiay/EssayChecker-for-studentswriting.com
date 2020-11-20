@@ -1,4 +1,4 @@
-﻿# EssayChecker
+﻿# EssayChecker 🔍
  
  A plugin that is used to check paragraph/essay structure based on the rules showing below:
  
@@ -11,7 +11,7 @@
 
 ## Usage
 
-### Setup
+### Setup 🔧
 
 - Copy the code from style.css to MediaWiki:Common.css
   - If a new page (eg. MediaWiki:Example.css) is created to contain it, add this line 
@@ -20,7 +20,7 @@
   - If a new page (eg. MediaWiki:Example.js) is created to contain it, add this line 
   `mw.loader.load( '/w/index.php?title=MediaWiki:Example.js&action=raw&ctype=text/javascript' );` to MediaWiki:Common.js to load
 - Create a template in MediaWiki (eg. Template:Example) and paste the following code:
-  ```
+  ```html
     <div class="modal">
       <div class="modalContent">
          <span class="close">&times;</span>
@@ -36,4 +36,4 @@
   
 ### Use Plug-In
 
-To check a paragraph, it must be wrapped with `<div class="checker-container"><p>YOUR PARAGRAPH</p></div>`. Add a `<p></p>` tag to each paragraph for essay checking. Once added, a button will show on top of your paragraph/essay. 
+To check a paragraph, it must be wrapped with `<div class="checker-container"><p>YOUR PARAGRAPH</p></div>`. Add a `<p></p>` tag to each paragraph for essay checking. Once added, a button will show on top of your paragraph/essay. Add `{{TEMPLATENAME}}` in any page where checker is needed. (Note: TEMPLATENAME must match the template name during setup, eg. Template:TEMPLATENAME.)
