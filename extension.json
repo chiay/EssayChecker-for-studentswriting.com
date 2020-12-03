@@ -1,0 +1,64 @@
+{
+	"name": "EssayChecker",
+	"version": "1.0.3",
+	"author": [
+		"Yi Xuan Chia"
+	],
+	"url": "",
+	"description": "This extension checks the structure of essays, paragraphs, and sentences",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\EssayChecker\\": "includes/"
+	},
+	"config": {
+		"EssayCheckerEnableCheck": {
+			"value": true,
+			"description": "Enables checking functionality"
+		}
+	},
+	"HookHandlers": {
+		"EssayCheckerHooks": {
+			"class": "MediaWiki\\Extension\\EssayChecker\\Hooks"
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": "EssayCheckerHooks"
+	},
+	"MessagesDirs": {
+		"EssayChecker": [
+			"i18n"
+		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "EssayChecker/resources"
+	},
+	"ResourceModules": {
+		"ext.essayChecker": {
+			"dependencies": [],
+			"messages": [],
+			"styles": [
+				"ext.essayChecker/style.css"
+			],
+			"packageFiles": [
+				"ext.essayChecker/init.js",
+				"ext.essayChecker/checker.js"
+			]
+		},
+		"ext.Compromise": {
+			"packageFiles": [
+				"ext.Compromise/compromise.min.js"
+			]
+		},
+		"ext.Nlp": {
+			"packageFiles": [
+				"ext.Nlp/init.js"
+			]
+		}
+	},
+	"manifest_version": 2
+}

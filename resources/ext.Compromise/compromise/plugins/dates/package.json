@@ -1,0 +1,54 @@
+{
+  "name": "compromise-dates",
+  "description": "plugin for nlp-compromise",
+  "version": "1.2.0",
+  "author": "Spencer Kelly <spencermountain@gmail.com> (http://spencermounta.in)",
+  "main": "./builds/compromise-dates.js",
+  "unpkg": "./builds/compromise-dates.min.js",
+  "module": "./builds/compromise-dates.mjs",
+  "types": "types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/spencermountain/compromise.git"
+  },
+  "scripts": {
+    "test": "tape \"./tests/**/*.test.js\" | tap-dancer  --color always",
+    "testb": "TESTENV=prod tape \"./tests/**/*.test.js\" | tap-dancer  --color always",
+    "watch": "amble ./scratch.js",
+    "build": "rollup -c --silent"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 120
+  },
+  "files": [
+    "builds/",
+    "types/index.d.ts"
+  ],
+  "eslintIgnore": [
+    "builds/*.js"
+  ],
+  "peerDependencies": {
+    "compromise": "^12.*.*",
+    "compromise-numbers": "latest"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "13.0.0",
+    "@rollup/plugin-json": "4.1.0",
+    "@rollup/plugin-node-resolve": "8.0.1",
+    "rollup": "2.15.0",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-filesize-check": "0.0.1",
+    "rollup-plugin-terser": "6.1.0",
+    "tap-dancer": "0.2.0",
+    "tape": "5.0.1"
+  },
+  "dependencies": {
+    "spacetime": "6.6.4",
+    "spacetime-holiday": "0.0.2"
+  },
+  "license": "MIT"
+}
