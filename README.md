@@ -14,6 +14,10 @@
 ### Setup 🔧
 
 - Download or clone repo to MediaWiki's extension folder
+- Add the following line to LocalSettings.php
+  ```php
+  wfLoadExtension( 'EssayChecker' );
+  ```
 - Create a template in MediaWiki (eg. Template:Example) and paste the following code:
   ```html
     <div class="modal">
