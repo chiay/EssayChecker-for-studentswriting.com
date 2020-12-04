@@ -13,12 +13,11 @@
 
 ### Setup 🔧
 
-- Copy the code from style.css to MediaWiki:Common.css
-  - If a new page (eg. MediaWiki:Example.css) is created to contain it, add this line 
-  `mw.loader.load( '/w/index.php?title=MediaWiki:Example.css&action=raw&ctype=text/css', 'text/css' );` to MediaWiki:Common.js to load 
-- Copy the code from script.js to MediaWiki.Common.js
-  - If a new page (eg. MediaWiki:Example.js) is created to contain it, add this line 
-  `mw.loader.load( '/w/index.php?title=MediaWiki:Example.js&action=raw&ctype=text/javascript' );` to MediaWiki:Common.js to load
+- Download or clone repo to MediaWiki's extension folder
+- Add the following line to LocalSettings.php
+  ```php
+  wfLoadExtension( 'EssayChecker' );
+  ```
 - Create a template in MediaWiki (eg. Template:Example) and paste the following code:
   ```html
     <div class="modal">
