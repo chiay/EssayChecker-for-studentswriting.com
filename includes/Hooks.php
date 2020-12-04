@@ -30,7 +30,7 @@ class Hooks implements \MediaWiki\Hook\BeforePageDisplayHook {
 		$config = $out->getConfig();
 		if ( $config->get( 'EssayCheckerEnableCheck' ) ) {
 			//$out->addHTML( '<p>Essay Checker Enabled</p>' );
-			$out->addModules( [ 'ext.essayChecker', 'ext.Compromise', 'ext.Nlp' ] );
+			$out->addModules( [ 'ext.essayChecker', 'ext.Compromise' ] );
 		}
 	}
 

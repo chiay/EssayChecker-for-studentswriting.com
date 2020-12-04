@@ -46,17 +46,13 @@
 			],
 			"packageFiles": [
 				"ext.essayChecker/init.js",
-				"ext.essayChecker/checker.js"
+				"ext.essayChecker/checker.js",
+				"ext.essayChecker/nlp.js"
 			]
 		},
 		"ext.Compromise": {
 			"packageFiles": [
 				"ext.Compromise/compromise.min.js"
-			]
-		},
-		"ext.Nlp": {
-			"packageFiles": [
-				"ext.Nlp/init.js"
 			]
 		}
 	},
