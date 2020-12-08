@@ -141,10 +141,9 @@ module.exports = function checkEssay() {
 			splittedSentence.shift();
 
 			var spannedSentence = addSpanTag(splittedSentence);
-
 			var resultParagraph = spannedSentence.join(' ');
-			var paragraphElement = document.createElement('p');
 
+			var paragraphElement = document.createElement('p');
 			paragraphElement.innerHTML = resultParagraph;
 			modalText.innerHTML += paragraphElement.outerHTML;
 		});
@@ -195,7 +194,7 @@ function setupModalControl() {
  * 
  * Add 'span' tag to each sentence of paragraph.
  * @param {string} sentenceArray
- * @return {HTMLDOM} Contains paragraph with 'span' tags for each sentence
+ * @return {HtmlDOM} Contains paragraph with 'span' tags for each sentence
  * 
  */
 
@@ -235,5 +234,28 @@ function addSpanTag(sentenceArray) {
 			}
 		});
 		return spanElement.outerHTML;
+	});
+}
+
+/**
+ * 
+ * Check structure of each sentence.
+ * @param {string} sentenceArray 
+ * 
+ * 
+ */ 
+
+// TODO: Call function from nlp.js to check if sentence matches one of the structures, then return the 			 HtmlDOM to display corresponding info in the modal
+
+var perSentenceStructure = require('./nlp.js');
+
+function checkSentenceStructure(sentenceArray) {
+	var hasNoMatchSentences = [];
+
+	return sentenceArray.map(function (sentence) {
+		if (!perSentenceStructure(sentence)) {
+			hasNoMatchSentences.push(sentence);
+		}
+
 	});
 }
