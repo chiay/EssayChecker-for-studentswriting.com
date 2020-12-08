@@ -118,6 +118,10 @@ var conclusionPhrases = [
 
 //checkEssay(checkerContainer);
 
+/**
+ * Entry point for checking all paragraphs.
+ */
+
 module.exports = function checkEssay() {
 	if (checkerContainer !== null) {
 		setupModalControl();
@@ -160,6 +164,10 @@ module.exports = function checkEssay() {
 	}
 }
 
+/**
+ * Set Up modal for showing checker result.
+ */
+
 function setupModalControl() {
 	var buttonElement = document.createElement('button');
 	var buttonText = document.createTextNode('Check here!');
@@ -182,6 +190,14 @@ function setupModalControl() {
 		}
 	});
 }
+
+/**
+ * 
+ * Add 'span' tag to each sentence of paragraph.
+ * @param {string} sentenceArray
+ * @return {HTMLDOM} Contains paragraph with 'span' tags for each sentence
+ * 
+ */
 
 function addSpanTag(sentenceArray) {
 	var len = sentenceArray.length;

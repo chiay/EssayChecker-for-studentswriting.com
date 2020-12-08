@@ -1,5 +1,5 @@
 /**
- * #Determiner (a.k.a article): a, an, the
+ * #Determiner (a.k.a Article): a, an, the
  *
  */
 
@@ -50,12 +50,26 @@ var sentenceStructures = [
 	'#Determiner #Adjective #Noun #Adverb #Verb * Preposition * #Determiner #Adjective #Noun * Preposition * #Determiner #Adjective #Noun',
 	'#Determiner #Adjective #Noun #Verb #Determiner #Adjective #Noun #Adverb * Preposition * #Determiner #Adjective #Noun',
 	'#Determiner #Adjective #Noun #Verb #Determiner #Adjective #Noun * Preposition * #Determiner #Adjective #Noun #Adverb',
-	'#Determiner #Adjective #Noun #Verb  * Preposition * #Determiner #Adjective #Noun * Preposition * #Determiner #Adjective #Noun #Adverb'
+	'#Determiner #Adjective #Noun #Verb  * Preposition * #Determiner #Adjective #Noun * Preposition * #Determiner #Adjective #Noun #Adverb',
 ];
+
+/**
+ *
+ * Natural language processing for each sentence of paragraph.
+ * @param {string} sentence
+ * @return {boolean} True if sentence matches one of the structures
+ *
+ */
 
 module.exports = function perSentenceStructure(sentence) {
 	mw.loader.using(['ext.Compromise'], function (require) {
 		require('ext.Compromise');
+
+		/*
+		sentenceStructures.some(structure => {
+			return nlp(sentence).has(structure);
+		});
+		*/
 
 		var t = nlp('He was kind.').has(sentenceStructures[5]);
 		console.log(t);
