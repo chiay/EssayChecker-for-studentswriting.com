@@ -40,6 +40,7 @@ var sentenceStructures = [
 	'#Adverb #Determiner #Adjective #Noun #Verb #Determiner #Adjective #Noun',
 	'#Adverb #Determiner #Adjective #Noun #Verb * #Preposition * #Determiner #Adjective #Noun',
 	'#Determiner #Adjective #Noun #Adverb #Verb #Determiner #Adjective #Noun',
+	'#Determiner #Adjective #Noun #Adverb #Verb * Preposition * #Determiner #Adjective #Noun',
 	'#Determiner #Adjective #Noun #Verb #Adverb * Preposition * #Determiner #Adjective #Noun',
 	'#Determiner #Adjective #Noun #Verb #Determiner #Adjective #Noun #Adverb',
 	'#Determiner #Adjective #Noun #Verb * Preposition * #Determiner #Adjective #Noun #Adverb',
@@ -52,7 +53,7 @@ var sentenceStructures = [
 	'#Determiner #Adjective #Noun #Verb  * Preposition * #Determiner #Adjective #Noun * Preposition * #Determiner #Adjective #Noun #Adverb'
 ];
 
-module.exports = function perSentenceStructure() {
+module.exports = function perSentenceStructure(sentence) {
 	mw.loader.using(['ext.Compromise'], function (require) {
 		require('ext.Compromise');
 
